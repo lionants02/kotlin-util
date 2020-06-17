@@ -1,6 +1,6 @@
 package max212.kotlin.util.hash
 
 interface Hash {
-    fun hash(plan: String): String
-    fun check(plan: String, hash: String): Boolean
+    fun hash(plaintext: String): String
+    fun check(plaintext: String, hash: String): Boolean
 }
