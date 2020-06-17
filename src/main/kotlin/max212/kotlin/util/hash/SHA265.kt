@@ -4,14 +4,14 @@ import java.nio.charset.StandardCharsets.UTF_8
 import java.security.MessageDigest
 
 class SHA265 : Hash {
-    override fun hash(plan: String): String {
+    override fun hash(plaintext: String): String {
         val digest = MessageDigest.getInstance("SHA-256")
-        val encodedHash = digest.digest(plan.toByteArray(UTF_8))
+        val encodedHash = digest.digest(plaintext.toByteArray(UTF_8))
         return encodedHash.toHex() ?: ""
     }
 
-    override fun check(plan: String, hash: String): Boolean {
-        return hash(plan) == hash
+    override fun check(plaintext: String, hash: String): Boolean {
+        return hash(plaintext) == hash
     }
 
     private fun ByteArray.toHex(): String? {

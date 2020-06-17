@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.mindrot:jbcrypt:0.4")
     testImplementation("junit:junit:4.12")
     testImplementation("org.amshove.kluent:kluent:1.61")
 }
